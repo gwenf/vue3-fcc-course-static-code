@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vue 3 Basics</title>
+        <style>
+            .box {
+                background-color: purple;
+                height: 200px;
+                width: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <div>
+                <!-- test #1 -->
+                <button>Toggle Box</button>
+                <div class="box"></div>
+            </div>
+
+            <hr />
+
+            <div>
+                <!-- test #2 -->
+                <h2 id="modeled-text">{{ message }}</h2>
+                <input v-model="greeting" id="modeled-text-input" />
+            </div>
+        </div>
+
+        <script src="https://unpkg.com/vue@next"></script>
+        <script>
+            let app = Vue.createApp({
+                data: function() {
+                    return {
+                        greeting: '',
+                        isVisible: false,
+                        message: ''
+                    }
+                },
+                methods: {
+                    toggleBox() {
+
+                    },
+                    greet(greeting) {
+                        this.message = greeting
+                    }
+                }
+            })
+
+            app.mount('#app')
+        </script>
+    </body>
+</html>

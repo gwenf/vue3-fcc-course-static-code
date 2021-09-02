@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vue 3 Basics</title>
+        <style>
+            .box {
+                background-color: purple;
+                height: 200px;
+                width: 200px;
+            }
+            .box.two {
+                background-color: red;
+            }
+            .box.three {
+                background-color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <div>
+                <!-- test #1 -->
+                <h2 id="modeled-text">{{ greeting }}</h2>
+                <input v-model="greeting" id="modeled-text-input" />
+            </div>
+
+            <hr />
+
+            <div>
+                <!-- test #2 -->
+                <div class="box"></div>
+                <div class="box two"></div>
+                <div class="box three"></div>
+            </div>
+        </div>
+
+        <script src="https://unpkg.com/vue@next"></script>
+        <script>
+            let app = Vue.createApp({
+                data: function() {
+                    return {
+                        greeting: '',
+                        isVisible: false,
+                        isVisible2: false
+                    }
+                }
+            })
+
+            app.mount('#app')
+        </script>
+    </body>
+</html>

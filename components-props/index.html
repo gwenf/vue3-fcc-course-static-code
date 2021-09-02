@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vue 3 Basics</title>
+        <style>
+            .box {
+                background-color: purple;
+                height: 200px;
+                width: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+        </div>
+
+        <script src="https://unpkg.com/vue@next"></script>
+        <script>
+            let app = Vue.createApp({
+                data: function() {
+                    return {
+                        greeting: '',
+                        isVisible: false,
+                        message: ''
+                    }
+                },
+                methods: {
+                }
+            })
+
+            app.mount('#app')
+        </script>
+    </body>
+</html>
