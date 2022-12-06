@@ -27,6 +27,33 @@
                 methods: {
                 }
             })
+            app.component('login-form',{
+                template: `
+                <form @submit="handleSubmit">
+                
+            </form>
+                `,
+                data(){
+                    email: '',
+                    password: '',
+                    emailLabel: 'Email',
+                    passwordLabel: 'Password'    
+                },
+                methods:{
+                    handleSubmit(){
+                        
+                    }
+                }
+            })
+            
+            app.component("custom-input",{
+                template: `
+                <label>
+                {{label}}
+                <input />
+            </label>
+                `,
+            })
 
             app.mount('#app')
         </script>
