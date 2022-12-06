@@ -14,8 +14,8 @@
         <div id="app">
             <div>
                 <!-- test #1 -->
-                <button>Toggle Box</button>
-                <div class="box"></div>
+                <button @click="toggleBox">Toggle Box</button>
+                <div class="box" v-if="isVisible"></div>
             </div>
 
             <hr />
@@ -39,7 +39,7 @@
                 },
                 methods: {
                     toggleBox() {
-
+                        this.isVisible = !this.isVisible
                     },
                     greet(greeting) {
                         this.message = greeting
